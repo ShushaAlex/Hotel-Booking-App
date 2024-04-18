@@ -6,11 +6,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,15 +21,16 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
+@Table(name = "user_")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String firstName;
-    private String secondName;
+    private String username;
     private String email;
 
+    @Builder.Default
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<Booking> bookings = new HashSet<>();
 

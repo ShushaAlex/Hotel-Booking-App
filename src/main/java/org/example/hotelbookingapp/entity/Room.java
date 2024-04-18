@@ -8,7 +8,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,6 +15,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -35,8 +35,9 @@ public class Room {
     private boolean isPetFriendly;
     private BigDecimal price;
 
+    @Builder.Default
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
-    private Set<Booking> bookings;
+    private Set<Booking> bookings = new HashSet<>();
 
     public void addBooking(Booking booking) {
         bookings.add(booking);

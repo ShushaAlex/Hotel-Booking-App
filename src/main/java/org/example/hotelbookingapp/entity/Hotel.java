@@ -1,18 +1,19 @@
 package org.example.hotelbookingapp.entity;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -27,18 +28,14 @@ public class Hotel {
 
     private String title;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false, mappedBy = "hotel")
+    @Embedded
     private Address address;
 
     private byte starsCount;
 
+    @Builder.Default
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
-    private Set<Room> rooms;
-
-    public void setAddress(Address address) {
-        this.address = address;
-        address.setHotel(this);
-    }
+    private Set<Room> rooms = new HashSet<>();
 
     public void addRoom(Room room) {
         rooms.add(room);
