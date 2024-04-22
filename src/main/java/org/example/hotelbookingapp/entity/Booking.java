@@ -10,7 +10,9 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -21,6 +23,8 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
+@ToString(exclude = {"user", "room"})
+@EqualsAndHashCode(exclude = {"user", "room"})
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

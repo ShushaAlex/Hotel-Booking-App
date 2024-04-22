@@ -12,7 +12,9 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
@@ -23,6 +25,8 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
+@ToString(exclude = {"hotel", "bookings"})
+@EqualsAndHashCode(exclude = {"hotel", "bookings"})
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class RoomService {
 
@@ -21,6 +23,13 @@ public class RoomService {
         this.roomMapper = roomMapper;
     }
 
+    public List<RoomResponseDto> findAll() {
+        return roomRepository.findAll()
+                .stream()
+                .map(roomMapper::roomResponseDto)
+                .toList();
+    }
+
     @Transactional
     public RoomResponseDto saveRoom(RoomCreateRequestDto requestDto) {
         Room room = roomMapper.toRoom(requestDto);
@@ -28,6 +37,5 @@ public class RoomService {
 
         return roomMapper.roomResponseDto(roomRepository.save(room));
     }
-
 
 }
