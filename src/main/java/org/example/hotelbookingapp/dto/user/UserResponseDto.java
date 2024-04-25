@@ -1,4 +1,4 @@
-package org.example.hotelbookingapp.dto;
+package org.example.hotelbookingapp.dto.user;
 
 import java.util.Set;
 

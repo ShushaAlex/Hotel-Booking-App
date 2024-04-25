@@ -1,4 +1,4 @@
-package org.example.hotelbookingapp.dto;
+package org.example.hotelbookingapp.dto.hotel;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

@@ -1,4 +1,4 @@
-package org.example.hotelbookingapp.dto;
+package org.example.hotelbookingapp.dto.room;
 
 import java.math.BigDecimal;
 

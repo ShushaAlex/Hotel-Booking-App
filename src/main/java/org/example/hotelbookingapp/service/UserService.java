@@ -1,6 +1,6 @@
 package org.example.hotelbookingapp.service;
 
-import org.example.hotelbookingapp.dto.UserResponseDto;
+import org.example.hotelbookingapp.dto.user.UserResponseDto;
 import org.example.hotelbookingapp.mapper.UserMapper;
 import org.example.hotelbookingapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

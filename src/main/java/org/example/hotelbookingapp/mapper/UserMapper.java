@@ -1,6 +1,6 @@
 package org.example.hotelbookingapp.mapper;
 
-import org.example.hotelbookingapp.dto.UserResponseDto;
+import org.example.hotelbookingapp.dto.user.UserResponseDto;
 import org.example.hotelbookingapp.entity.Booking;
 import org.example.hotelbookingapp.entity.User;
 import org.springframework.stereotype.Component;

@@ -1,7 +1,7 @@
 package org.example.hotelbookingapp.service;
 
-import org.example.hotelbookingapp.dto.HotelCreateRequestDto;
-import org.example.hotelbookingapp.dto.HotelResponseDto;
+import org.example.hotelbookingapp.dto.hotel.HotelCreateRequestDto;
+import org.example.hotelbookingapp.dto.hotel.HotelResponseDto;
 import org.example.hotelbookingapp.entity.Hotel;
 import org.example.hotelbookingapp.mapper.HotelMapper;
 import org.example.hotelbookingapp.repository.HotelRepository;

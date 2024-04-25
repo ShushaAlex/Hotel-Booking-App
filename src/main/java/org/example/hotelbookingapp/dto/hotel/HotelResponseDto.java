@@ -1,9 +1,9 @@
-package org.example.hotelbookingapp.dto;
+package org.example.hotelbookingapp.dto.hotel;
 
 public record HotelResponseDto(
         Long id,
         String title,
         String city,
-        Byte starsCount
+        Integer starsCount
 ) {
 }

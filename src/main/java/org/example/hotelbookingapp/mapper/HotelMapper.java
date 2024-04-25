@@ -1,7 +1,7 @@
 package org.example.hotelbookingapp.mapper;
 
-import org.example.hotelbookingapp.dto.HotelCreateRequestDto;
-import org.example.hotelbookingapp.dto.HotelResponseDto;
+import org.example.hotelbookingapp.dto.hotel.HotelCreateRequestDto;
+import org.example.hotelbookingapp.dto.hotel.HotelResponseDto;
 import org.example.hotelbookingapp.entity.Address;
 import org.example.hotelbookingapp.entity.Hotel;
 import org.springframework.stereotype.Component;

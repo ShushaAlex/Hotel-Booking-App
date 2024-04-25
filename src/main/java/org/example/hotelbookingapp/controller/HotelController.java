@@ -1,8 +1,8 @@
 package org.example.hotelbookingapp.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.hotelbookingapp.dto.HotelCreateRequestDto;
-import org.example.hotelbookingapp.dto.HotelResponseDto;
+import org.example.hotelbookingapp.dto.hotel.HotelCreateRequestDto;
+import org.example.hotelbookingapp.dto.hotel.HotelResponseDto;
 import org.example.hotelbookingapp.service.HotelService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

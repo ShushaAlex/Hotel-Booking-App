@@ -1,6 +1,7 @@
 package org.example.hotelbookingapp.mapper;
 
-import org.example.hotelbookingapp.dto.BookingResponseDto;
+import org.example.hotelbookingapp.dto.booking.BookingCreateRequestDto;
+import org.example.hotelbookingapp.dto.booking.BookingResponseDto;
 import org.example.hotelbookingapp.entity.Booking;
 import org.springframework.stereotype.Component;
 
@@ -17,5 +18,12 @@ public class BookingMapper {
                 booking.getEndDate(),
                 booking.getPrice()
         );
+    }
+
+    public Booking toBooking(BookingCreateRequestDto dto) {
+        return Booking.builder()
+                .startDate(dto.startDate())
+                .endDate(dto.endDate())
+                .build();
     }
 }

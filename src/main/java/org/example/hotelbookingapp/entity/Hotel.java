@@ -35,7 +35,7 @@ public class Hotel {
     @Embedded
     private Address address;
 
-    private byte starsCount;
+    private int starsCount;
 
     @Builder.Default
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)

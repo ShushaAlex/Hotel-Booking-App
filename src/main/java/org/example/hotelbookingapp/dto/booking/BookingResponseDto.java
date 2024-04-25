@@ -1,4 +1,4 @@
-package org.example.hotelbookingapp.dto;
+package org.example.hotelbookingapp.dto.booking;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

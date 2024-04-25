@@ -1,4 +1,4 @@
-package org.example.hotelbookingapp.dto;
+package org.example.hotelbookingapp.dto.room;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Positive;
